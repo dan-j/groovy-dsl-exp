@@ -8,13 +8,6 @@ class ActionDSL {
 	String action
 	def params = [:]
 	
-	def parse(closure) {
-		closure.delegate = this
-		closure()
-		
-		return this
-	}
-	
 	def action(String action) {
 		this.action = action
 	}

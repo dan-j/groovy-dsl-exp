@@ -1,17 +1,12 @@
 package com.danj.groovy_test.dsl
 
+import groovy.transform.ToString;
+
+@ToString
 class TestcaseDSL {
 	
 	String name
 	def actions = [:]
-	
-	def parse(closure) {
-		closure.delegate = this
-		closure()
-		
-		return this
-	}
-	
 	
 	def methodMissing(String name, args) {
 		this.name = name

@@ -10,7 +10,7 @@ class Main {
 		def test = Class.forName(testName).newInstance()
 		TestcaseDSL dsl = new TestcaseDSL()
 		dsl.with test.testcase
-						
+					
 		println "Testcase name: " + dsl.name
 
 		dsl.actions.each { alias, step ->
